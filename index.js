@@ -104,6 +104,36 @@ res.json({
     message:"update sucessfully"
 })
 })
+
+app.patch('/product/:_id',async (req,res)=>{
+    const {_id} = req.params
+    const {name,description,price,productImage,brand}=req.body
+    const Product=await product.findOne({_id : _id})
+    if(name){
+        Product.name=name;
+    }
+    if(description){
+        Product.description=description;
+    }
+    if(price){
+        Product.price=price;
+    }
+    if(productImage){
+        Product.productImage=productImage;
+    }
+    if(brand){
+        Product.brand=brand;
+    }
+
+    const saveproduct = await Product.save();
+
+    res.json({
+        success:true,
+        data:saveproduct,
+        message:"update specific one is done"
+    })
+
+})
 const PORT=8080;
 app.listen(PORT,(req,res)=>{
 console.log(`server is running on PORT ${PORT}`)
