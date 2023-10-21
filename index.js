@@ -16,8 +16,6 @@ const mongodbConnection =  async()=>{
     }
 }
 mongodbConnection();
-
-
 app.get('/products', async (req,res)=>{
     const products= await product.find();
     res.json({
@@ -28,7 +26,30 @@ app.get('/products', async (req,res)=>{
 })
 app.post('/product', async (req,res)=>{
     const{name,description,price,productImage,brand}=req.body
-
+     if(!name){
+     return res.json({
+         success:false,
+         message:"Product name is required"
+     })
+     }
+     if(!description){
+        return res.json({
+             success:false,
+            message:"Product description is required"
+        })
+        }
+        if(!price){
+            return res.json({
+                success:false,
+                message:"Product price is required"
+            })
+        }
+        if(!brand){
+            return res.json({
+                success:false,
+                message:"Product brand is required"
+            })
+        }
     const newProduct = new product({
     name :name,
     description:description,
@@ -52,6 +73,18 @@ app.get('/product', async (req,res)=>{
      message:"successfuly find your product"
     })
     })
+
+app.delete('/product/:_id',async (req,res)=>{
+const {_id}=req.params;
+await product.deleteOne({_id:_id})
+res.json({
+    success:false,
+    message:"deleted succsessfuly"
+})
+
+
+
+})    
 const PORT=8080;
 app.listen(PORT,(req,res)=>{
 console.log(`server is running on PORT ${PORT}`)
