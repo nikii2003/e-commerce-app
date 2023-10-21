@@ -89,7 +89,36 @@ res.json({
 app.put('/product/:_id', async (req,res)=>{
 const {_id}=req.params;
 const {name,description,price,brand,productImage}=req.body;
-
+if(!name){
+    return res.json({
+        success : false,
+        message:"name is required"
+    })
+}
+if(!description){
+    return res.json({
+        success : false,
+        message:"description is required"
+    })
+}
+if(!price){
+    return res.json({
+        success : false,
+        message:"price is required"
+    })
+}
+if(!brand){
+    return res.json({
+        success : false,
+        message:"brand is required"
+    })
+}
+if(!productImage){
+    return res.json({
+        success : false,
+        message:"productimage is required"
+    })
+}
 await product.updateOne({_id:_id},{$set :{
     name : name,
     description:description,
