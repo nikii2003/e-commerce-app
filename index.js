@@ -84,7 +84,26 @@ res.json({
 
 
 
-})    
+})   
+
+app.put('/product/:_id', async (req,res)=>{
+const {_id}=req.params;
+const {name,description,price,brand,productImage}=req.body;
+
+await product.updateOne({_id:_id},{$set :{
+    name : name,
+    description:description,
+    price:price,
+    brand:brand,
+    productImage:productImage
+}})
+const updateProduct = await product.findOne({_id:_id})
+res.json({
+    success:true,
+    data: updateProduct,
+    message:"update sucessfully"
+})
+})
 const PORT=8080;
 app.listen(PORT,(req,res)=>{
 console.log(`server is running on PORT ${PORT}`)
