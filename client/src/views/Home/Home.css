@@ -1,0 +1,22 @@
+.text-center{
+    text-align: center;
+}
+.product-card{
+    
+    box-shadow: 0 0 10px 1px rgb(68, 68, 68);
+}
+.product-image{
+    height: 200px;
+    width: 300px;
+    margin: 20px 50px;
+}
+.product-card-container{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 1px rgb(100, 100, 100);
+    margin: 10px;
+    
+}
+.product-text{
+    margin-left: 200px;
+}
