@@ -1,0 +1,17 @@
+.text-center{
+    text-align: center;
+}
+.input-container{
+display: block;
+
+}
+.input-field{
+    display: block;
+    margin: 10px auto;
+    width: 300px;
+    height: 25px;
+}
+.add-product-btn{
+    display: block;
+    margin: 10px auto;
+}

@@ -20,3 +20,6 @@
 .product-text{
     margin-left: 200px;
 }
+.detail-button{
+    cursor: pointer;
+}

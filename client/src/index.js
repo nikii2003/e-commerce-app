@@ -2,8 +2,9 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './views/Home/Home';
-import AddProduct from './views/AddProduct/AddProduct'
+import AddProduct from './views/AddProduct/AddProduct.js'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import ProductDetails from './views/ProductDetails/ProductDetails';
 
 const router=createBrowserRouter([{
     path:'/',
@@ -12,6 +13,10 @@ const router=createBrowserRouter([{
 {
     path:'/addproduct',
     element:<AddProduct/>
+},
+{
+    path:'/productdetail/:_id',
+    element:<ProductDetails/>
 }
 
 ])
