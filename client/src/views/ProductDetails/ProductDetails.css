@@ -5,3 +5,12 @@
     border: 1px solid;
     text-align: center;
 }
+.input-container{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgb(182, 181, 181);
+    width: fit-content;
+    padding: 20px ;
+    border-radius: 5px;
+    
+    }

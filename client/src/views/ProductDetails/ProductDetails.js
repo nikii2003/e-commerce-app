@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./ProductDetails.css"
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import Navbar from '../../components/Navbar/Navbar'
 
 export default function ProductDetails() {
   const { _id } = useParams();
@@ -18,6 +19,7 @@ export default function ProductDetails() {
  
   return (
     <div className='product-container'>
+      <Navbar/>
       <h1 className='text-center'>ProductDetails</h1>
       <div>
       <p1 className='text-center'> ProductId :{_id}</p1>

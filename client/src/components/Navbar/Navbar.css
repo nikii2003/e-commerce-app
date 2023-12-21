@@ -1,0 +1,12 @@
+.navbar-item{
+    margin: 0 70px;
+    text-decoration: none;
+    color: black;
+   
+}
+.navbar-div{
+    height: 70px;
+    padding: 20px;
+    background-color: rgb(230, 161, 161);
+    font-weight: bold;
+}

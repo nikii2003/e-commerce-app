@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AddProduct.css";
 import axios from "axios";
+import Navbar from "../../components/Navbar/Navbar";
 
 function AddProduct() {
   const [name, setName] = useState("");
@@ -29,9 +30,10 @@ function AddProduct() {
   };
   return (
     <div>
-      <h1 className="text-center">Add Products Here 👇</h1>
+      <Navbar/>
+      <h3 className="text-center">Add Products Here 👇</h3>
 
-      <form className="input-container">
+      <form className=" input-container  col-sm-4 p-1">
         <input
           type="text"
           placeholder="name"
@@ -39,7 +41,7 @@ function AddProduct() {
           onChange={(e) => {
             setName(e.target.value);
           }}
-          className="input-field"
+          className="input-field  "
         />
 
         <input
@@ -49,7 +51,7 @@ function AddProduct() {
           onChange={(e) => {
             setDescription(e.target.value);
           }}
-          className="input-field"
+          className="input-field m-1"
         />
         <input
           type="text"

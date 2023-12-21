@@ -3,15 +3,25 @@
 }
 .input-container{
 display: block;
+margin: 0 auto;
+border: 1px solid rgb(182, 181, 181);
+width: fit-content;
+padding: 20px ;
+border-radius: 5px;
 
 }
 .input-field{
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 300px;
     height: 25px;
+    padding: 15px;
+
 }
 .add-product-btn{
     display: block;
     margin: 10px auto;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: rgb(241, 150, 150);
 }
